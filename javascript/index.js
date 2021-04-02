@@ -13,6 +13,29 @@ let milDec = document.getElementById('milDec');
 let milUni = document.getElementById('milUni');
 let splits = document.getElementById('splits');
 
+// CHANGING BUTTON TEXT AND COLOR
+
+console.log(chronometer.startClick())
+
+btnLeft.addEventListener('click', function(){
+  if (btnLeft.className === 'btn start') {btnLeft.className = 'btn stop'}
+  else {btnLeft.className = 'btn start'}
+
+  if (btnLeft.innerText === 'START') {btnLeft.innerText = 'STOP'}
+  else {btnLeft.innerText = 'START'}
+
+  if(btnLeft.className === 'btn stop') { chronometer.startClick() }
+  else { chronometer.stopClick() } 
+})
+
+btnRight.addEventListener('click', function(){
+  if(btnRight.className === 'btn reset'){btnRight.className = 'btn split'}
+  else {btnRight.className = 'btn reset'}
+
+  if(btnRight.innerText === 'RESET'){btnRight.innerText = 'SPLIT'}
+else {btnRight.innerText = 'RESET'}
+})
+
 function printTime() {
   // ... your code goes here
 }
